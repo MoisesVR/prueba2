@@ -1,0 +1,99 @@
+.navbar{
+    color: white;
+}
+
+.name{
+    padding-left: 10%;
+}
+
+.containerImg{
+    margin: 0;
+    color: white;
+    height: 200px;
+    text-align: center;
+    background-image: url("https://i.pinimg.com/564x/a6/7c/26/a67c2652456166ab6a010bf48446e548.jpg");
+}
+
+.subTitle{
+    border-bottom: 1px solid gray;
+}
+
+.titleHome{
+    padding-top: 4%;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.cont{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px,auto);
+}
+
+.imgCarrito{
+    width: 150px;
+    height: 50px;
+}
+
+.containerPizza{
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 100vh;
+}
+
+.imgPizza{
+    margin-top: 10px;
+    width: 600px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+.bg-info{
+    border: 0px;
+}
+
+.containerCarritoText{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.containerCarrito{
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    background-color:rgb(226, 219, 219);
+    padding: 30px;
+}
+
+.containerTextPizza{
+    margin: 10px;
+}
+
+.card{
+    display: flex;
+    margin: 10px;
+}
+
+.containerButtons{
+    text-align: center;
+}
+
+.btn{
+    margin: 5px;
+}
+
+.bgCont{
+    background-image: url("https://fondosmil.com/fondo/65806.jpg");
+}
+
+.bgPizza{
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-gourmet-pizza-big-sale-texture-hand-painted-black-banner-image_170751.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}

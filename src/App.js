@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { AppPizzaContextProvider } from "./context/AppPizzaContext";
+import { ShoppingCartContextProvider } from "./context/ShoppingCartContext";
+
+import Home from "./Views/Home";
+import Pizza from "./Views/Pizza";
+import Carrito from "./Views/Carrito";
+
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppPizzaContextProvider>
+      <ShoppingCartContextProvider>
+        <BrowserRouter>
+
+          <ToastContainer />
+          <Navbar />
+
+        <Routes>
+          <Route index element={< Home />}/>
+          <Route path="/home" element={< Home />} />
+          <Route path="/pizza/:id" element={< Pizza />} />
+          <Route path="/carrito" element={<Carrito />} />
+        </Routes>
+      </BrowserRouter>
+    </ShoppingCartContextProvider>
+    </AppPizzaContextProvider >
   );
 }
 
